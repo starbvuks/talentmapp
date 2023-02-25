@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:talentmappdraft/screens/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -49,7 +50,10 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             TextButton(
               onPressed: () {
-                // TODO: Navigate to signup screen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SignUpScreen()),
+                );
               },
               child: const Text('Create an account'),
             ),

@@ -13,6 +13,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   final TextEditingController _firstNameController = TextEditingController();
   final TextEditingController _lastNameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _phoneController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
   void _onSignUpButtonPressed() {
@@ -20,16 +21,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
       firstName: _firstNameController.text.trim(),
       lastName: _lastNameController.text.trim(),
       email: _emailController.text.trim(),
+      phone: _phoneController.text.trim(),
       password: _passwordController.text.trim(),
       userRole: _selectedUserRole,
     );
 
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => ProfileCreationScreen(user: user),
-      ),
-    );
+    // Navigator.push(
+    //   context,
+    //   MaterialPageRoute(
+    //     builder: (context) => ProfileCreationScreen(user: user),
+    //   ),
+    // );
   }
 
   @override
@@ -59,6 +61,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
               controller: _emailController,
               decoration: InputDecoration(
                 labelText: 'Email',
+              ),
+            ),
+            TextField(
+              controller: _phoneController,
+              decoration: InputDecoration(
+                labelText: 'Phone',
               ),
             ),
             TextField(
