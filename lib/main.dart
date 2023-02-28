@@ -49,7 +49,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'TalentMapp',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blueGrey,
         textTheme: GoogleFonts.workSansTextTheme(
           Theme.of(context).textTheme,
         ),
