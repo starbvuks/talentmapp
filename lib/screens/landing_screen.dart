@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:talentmappdraft/models/user.dart';
 import 'login_screen.dart';
+import 'login.dart';
 import 'signup_screen.dart';
 import 'dashboards/applicant_dashboard_screen.dart';
 import 'map_test.dart';
 import 'applicant_profile_screen.dart';
 
+import 'package:google_fonts/google_fonts.dart';
 import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:amplify_api/amplify_api.dart';
 
@@ -57,10 +59,12 @@ class LandingScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const LoginScreen()),
+                  MaterialPageRoute(builder: (context) => const Login()),
                 );
               },
-              child: const Text('Log In'),
+              child: const Text(
+                'Log In',
+              ),
             ),
             ElevatedButton(
               onPressed: () {

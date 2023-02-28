@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'screens/dashboards/applicant_dashboard_screen.dart';
 import 'screens/landing_screen.dart';
 import 'screens/login_screen.dart';
@@ -8,6 +9,7 @@ import 'screens/map_test.dart';
 import 'screens/signup_screen.dart';
 import 'models/user.dart';
 
+import 'package:google_fonts/google_fonts.dart';
 import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:amplify_api/amplify_api.dart';
 
@@ -48,6 +50,9 @@ class _MyAppState extends State<MyApp> {
       title: 'TalentMapp',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        textTheme: GoogleFonts.workSansTextTheme(
+          Theme.of(context).textTheme,
+        ),
       ),
       home: LandingScreen(),
       routes: <String, WidgetBuilder>{

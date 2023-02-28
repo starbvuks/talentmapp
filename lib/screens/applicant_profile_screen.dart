@@ -1,6 +1,7 @@
 import 'dart:ffi';
 import 'dart:io';
 
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
@@ -82,7 +83,10 @@ class _ApplicantProfileScreenState extends State<ApplicantProfileScreen> {
     final User user;
     return Scaffold(
         appBar: AppBar(
-          title: Text('Applicant Profile'),
+          title: Text(
+            'Applicant Profile',
+            style: GoogleFonts.lato(),
+          ),
           actions: [
             IconButton(
               icon: Icon(Icons.edit),
